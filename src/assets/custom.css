@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  margin-top: 150px;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 96px;
+
+  .dev-logo-container {
+    width: 200px;
+    height: 200px;
+    border: 12px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: logoReveal 1s ease-out forwards;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.main-text {
+  font-size: 40px;
+}
+
+.sub-text {
+  color: #766d6d;
+}
+
+.about-me-main {
+  margin-top: 61px;
+  background-color: #292f36;
+  padding: 50px 0;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .about-me-text {
+    font-size: 50px;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-top-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    font-weight: 700;
+  }
+}
+
+.about-me-details-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  gap: 40px;
+
+  .about-me-details-left {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        #ef4444,
+        #2563eb,
+        #facc15,
+        #22c55e,
+        #a855f7,
+        #ec4899,
+        #06b6d4,
+        #f97316
+      );
+      background-size: 200% 100%;
+      animation: gradientMove 3s linear infinite;
+    }
+
+    .about-me-details-left-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .about-me-details-left-item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: #fff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .about-me-details-right {
+    flex: 1;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    padding: 30px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        #ef4444,
+        #2563eb,
+        #facc15,
+        #22c55e,
+        #a855f7,
+        #ec4899,
+        #06b6d4,
+        #f97316
+      );
+      background-size: 200% 100%;
+      animation: gradientMove 3s linear infinite;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.8;
+      font-size: 16px;
+      color: #e0e0e0;
+      text-align: justify;
+      position: relative;
+      padding-left: 20px;
+      z-index: 1;
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.red {
+  color: #ef4444;
+}
+
+.blue {
+  color: #2563eb;
+}
+
+.yellow {
+  color: #facc15;
+}
+
+.green {
+  color: #22c55e;
+}
+
+.purple {
+  color: #a855f7;
+}
+
+.pink {
+  color: #ec4899;
+}
+
+.cyan {
+  color: #06b6d4;
+}
+
+.orange {
+  color: #f97316;
+}
+
+.dre-logo {
+  height: 96px;
+  width: auto;
+  display: inline;
+  vertical-align: center;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: #fff;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.skills-main {
+  background-color: #1a1a2e;
+  padding: 50px 0;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .skills-text {
+    font-size: 50px;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-top-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    font-weight: 700;
+  }
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-category {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      #ef4444,
+      #2563eb,
+      #facc15,
+      #22c55e,
+      #a855f7,
+      #ec4899,
+      #06b6d4,
+      #f97316
+    );
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+  }
+
+  .skill-category-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .skill-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateX(5px);
+    }
+
+    .skill-icon {
+      font-size: 12px;
+      min-width: 16px;
+    }
+
+    span {
+      font-size: 15px;
+      color: #e0e0e0;
+    }
+  }
+}
+
+.experience-main {
+  background-color: #242444;
+  padding: 50px 0;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .experience-text {
+    font-size: 50px;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-top-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    font-weight: 700;
+  }
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience-item {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      #ef4444,
+      #2563eb,
+      #facc15,
+      #22c55e,
+      #a855f7,
+      #ec4899,
+      #06b6d4,
+      #f97316
+    );
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .experience-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .experience-date {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .experience-company {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .experience-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experience-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
+
+    .bullet-icon {
+      font-size: 14px;
+      min-width: 16px;
+      margin-top: 2px;
+    }
+
+    span {
+      font-size: 15px;
+      color: #e0e0e0;
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  .intro-container {
+    height: 737px;
+  }
+}
