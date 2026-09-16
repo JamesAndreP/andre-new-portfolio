@@ -44,7 +44,7 @@ onMounted(() => {
     <div class="wrapper">
       <div class="intro-container">
         <div class="dev-logo-container">
-          <img src="../assets/img/james-logo.png" alt="Dev Logo" />
+          <img src="../assets/img/james-dev-logo.png" alt="Dev Logo" />
         </div>
         <div class="align-center">
           <span
