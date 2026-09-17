@@ -79,12 +79,8 @@ onMounted(() => {
             v-for="(char, index) in thirdLineText"
             :key="'third-' + index"
             :class="getCharColor(index)"
+            >{{ char }}</span
           >
-            <template v-if="index === 0 && char === 'D'">
-              <img src="../assets/img/dre-primary-logo.png" alt="D" class="dre-logo" />
-            </template>
-            <template v-else>{{ char }}</template>
-          </span>
           <span
             v-if="
               showCursor &&
